@@ -1,0 +1,19 @@
+{
+  "windows": [
+    {
+      "bucket": "codex",
+      "window_minutes": 300,
+      "status": "observed",
+      "reason": null,
+      "observed_change_pp": 56.0
+    },
+    {
+      "bucket": "codex",
+      "window_minutes": 10080,
+      "status": "observed",
+      "reason": null,
+      "observed_change_pp": 9.0
+    }
+  ],
+  "interpretation": "Account-wide observations, not exact task charges or measured savings. Rounding, delayed accounting and concurrent activity may affect them. A zero displayed change does not prove zero consumption."
+}

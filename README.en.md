@@ -79,4 +79,10 @@ The project began with a discussion of [this KV-cache article](https://habr.com/
 
 Contribute anonymized examples and expected versus actual behavior. Savings claims need comparable tasks, settings, quality checks, and documented confounders. See [behavioral scenarios](docs/validation.md) and the [changelog](CHANGELOG.md).
 
-Created with Codex. An independent community project, not an official OpenAI product. MIT licensed.
+## Authors
+
+**[Skynetuz](https://github.com/Skynetuz)** — project creator: concept, requirements, direction, and feedback.
+
+**Codex (OpenAI)** — AI co-author: skill and utility implementation, tests, documentation, banner, and repository presentation, created at Skynetuz's direction.
+
+AI co-authorship describes the tool's contribution; it does not imply organizational participation or endorsement by OpenAI. An independent community project. MIT licensed.

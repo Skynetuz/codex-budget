@@ -60,7 +60,7 @@ OK
 
 - Тариф **Plus** подтверждён инструментом статистики.
 - Модель **GPT-6 Astra**, reasoning **High** — сообщены пользователем; инструмент квоты не подтверждает модель или effort.
-- Режим скорости неизвестен; Standard не предполагается автоматически.
+- Режим скорости **стандартный / default**, по последующему уточнению пользователя: ускоренные режимы не использовались. Настройка отдельно не проверялась инструментом.
 - Окно 300 минут: одинаковый reset `2026-10-20T20:32:26Z`.
 - Окно 10 080 минут: одинаковый reset `2026-10-27T10:12:43Z`.
 - Наличие другой активности аккаунта не подтверждено и не исключено.
@@ -86,6 +86,20 @@ python skills/codex-budget/scripts/compare_usage.py docs/experiments/2026-10-20/
 
 Показание сделано внутри активного хода. Оно исключает последующее оформление отчёта, проверки публикации, отправку на GitHub, финальный ответ и ещё не отражённый учёт. Это не финальная стоимость всего обновления 0.2.0. Округление и отложенный учёт дополнительно ограничивают точность.
 
+## Дополнение после публикации
+
+Пользователь позже сообщил об остатке **13%** пятичасовой квоты и уточнил, что это показание после завершения оформления страницы. Точное время не зафиксировано. Следующая проверка инструментом, в начале хода с правками авторства, дала другие текущие значения:
+
+| Контрольная точка | UTC | Пятичасовое: использовано / осталось | Недельное: использовано / осталось |
+|---|---|---|---|
+| Позднее наблюдение | 19:42:39 | 91% / 9% | 15% / 85% |
+
+Сбросы обоих окон совпадают с исходными. От начального показания 35% до позднего 91% наблюдается **+56 п.п.** пятичасовой квоты; от 6% до 15% — **+9 п.п.** недельной. Это расширенный интервал продолжительностью 47 мин 38 сек, включающий публикацию, паузу между сообщениями и начало следующего хода. Он не является изолированным замером стоимости обновления: прочая активность и отложенный учёт неизвестны.
+
+Разницу между сообщёнными 13% остатка и инструментальными 9% нельзя однозначно объяснить одним фактором. В отчёте сохранены оба наблюдения с разными источниками. Прежние +23 п.п. относятся только к раннему интервалу, а не к окончательному расходу всей работы.
+
+[Поздний снимок](experiments/2026-10-20/followup.json) · [Сравнение с началом](experiments/2026-10-20/followup-comparison.json)
+
 ## Что улучшено по результатам
 
 1. Перед арифметикой явно устанавливается направление used/remaining.
@@ -100,4 +114,4 @@ python skills/codex-budget/scripts/compare_usage.py docs/experiments/2026-10-20/
 
 ---
 
-**English summary:** 28 local utility tests passed. One active-session observation on Plus changed from 35% to 58% used in the five-hour window and from 6% to 10% in the weekly window. GPT-6 Astra / High was user-reported; speed and concurrent activity were unknown. The interval included utility development, tests, and documentation work. It excludes later publication work and delayed accounting. No controlled no-skill baseline was run; no savings claim is supported.
+**English summary:** 28 local utility tests passed. The early Plus observation changed from 35% to 58% used in the five-hour window and from 6% to 10% in the weekly window. GPT-6 Astra / High and Standard/default speed were user-reported; concurrent activity was unknown. A later tool reading showed 91% and 15% used, respectively: +56 and +9 percentage points from the initial reading over a broader, non-isolated interval. The user separately reported 13% remaining before that reading. No controlled no-skill baseline was run; no savings claim is supported.
