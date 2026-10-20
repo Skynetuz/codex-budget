@@ -29,8 +29,10 @@ Optimize allowance consumed per successfully completed task. Preserve requested 
 
 For an explicit usage question or a meaningful comparison, use an available read-only account-usage tool. No tool means unknown usage, not zero. Do not scan private application databases or credentials to obtain metrics.
 
-Take a baseline and an end reading when measuring; avoid continuous polling. Keep each usage window separate. Report changes in percentage points, not token-derived quota estimates. Account-wide readings may include other chats and delayed accounting.
+Take a baseline and an end reading when measuring; avoid continuous polling. Establish whether a displayed percentage means used or remaining. Record model and effort as user-reported unless verified; do not infer settings from quota data. Keep each usage window separate. Report changes in percentage points, not token-derived quota estimates.
 
-Read [measurement.md](references/measurement.md) only for a measurement or comparison. A requested quota ceiling is a best-effort target, not a guaranteed cap. If a user explicitly requires stopping at a threshold, stop at a safe checkpoint when an observed reading reaches it and report unfinished work. Low remaining quota alone does not authorize abandoning the task.
+Read [measurement.md](references/measurement.md) only for a measurement or comparison; it documents the optional local [comparison helper](scripts/compare_usage.py). Account-wide readings may include other chats and delayed accounting. A reading taken during an active turn is a checkpoint, not a final bill for that turn; later work and final accounting are excluded.
 
-Do not promise a savings percentage, translate API cache discounts into subscription allowance, or silently change account settings. Save measurements only when requested, outside this installed skill and outside public repositories.
+A requested quota ceiling is a best-effort target, not a guaranteed cap. If a user explicitly requires stopping at a threshold, stop at a safe checkpoint when an observed reading reaches it and report unfinished work. Low remaining quota alone does not authorize abandoning the task.
+
+Do not promise savings, translate API cache discounts into subscription allowance, or silently change account settings. Save measurements only when requested, outside this installed skill. Keep journals private by default. Explicit authorization to publish test results permits a minimal sanitized report: exclude credentials, account identifiers, private paths, and raw tool responses.

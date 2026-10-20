@@ -1,5 +1,13 @@
 # Validation and acceptance scenarios
 
+## Version 0.2.0
+
+The utility now has 28 executable tests in [test_compare_usage.py](../tests/test_compare_usage.py).
+Run `python -m unittest discover -s tests -v` from the repository root.
+Actual outcomes and account-usage checkpoints are in [the test report](test-report.md).
+The table below remains a set of manual behavioral acceptance scenarios, not a
+claim that 28 independent agent tasks or a controlled savings experiment ran.
+
 ## Release scope
 
 The first release is instruction-only. Structural validation and a manual scenario review are appropriate; they do not establish model compliance or real-world savings. No live quota experiment or independent agent evaluation is claimed.

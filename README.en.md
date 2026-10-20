@@ -1,28 +1,26 @@
+![Codex Budget: Scope → Work → Verify](docs/assets/banner.svg)
+
 # Codex Budget
 
 **Complete useful work while conserving Codex subscription allowance.**
 
-[Русский](README.md) · [Skill instructions](skills/codex-budget/SKILL.md) · [MIT](LICENSE)
+[Русский](README.md) · [Test report](docs/test-report.md) · [Human guide, Russian](docs/guide.ru.md) · [MIT](LICENSE)
 
-Experimental release **0.1.0**. No measured savings claim yet.
+Version **0.2.0** · **28 local utility tests passed** · **Savings not yet proven**
 
-This small, instruction-only skill helps Codex avoid repeated investigation, unnecessary attempts, and scope expansion while preserving required quality and verification. When requested, it recommends suitable settings and compares available account-usage readings.
+Codex Budget is a small local skill that encourages focused investigation, reuse of relevant evidence, fewer repetitive attempts, and appropriate verification. It preserves your requested scope and quality. Settings advice and usage measurement happen when useful or requested.
 
-It cannot increase your allowance, enforce a hard spending cap, or switch the current model through prompt text. It does not move work to a paid API, install telemetry, or record usage journals unless requested.
+It cannot increase your allowance, enforce a hard spending cap, or switch the current model through prompt text. No paid API client, telemetry, background monitoring, or automatic settings changes are included.
 
-## Install
+## Install and use
 
-Ask Codex, when `skill-installer` is available:
+When `skill-installer` is available:
 
 ```text
 $skill-installer install https://github.com/Skynetuz/codex-budget/tree/main/skills/codex-budget
 ```
 
-Or copy only `skills/codex-budget` to the local skills directory supported by your installation. Environments using `$CODEX_HOME/skills` should use that location, commonly `~/.codex/skills`. Current documentation also describes `~/.agents/skills` for user scope and `.agents/skills` for project scope. Consult [Build skills](https://learn.chatgpt.com/docs/build-skills) for your host; avoid duplicate installations in multiple scanned paths.
-
-Check that Codex Budget appears in the skill list. Restart Codex if needed. Publishing on GitHub does not list the skill in OpenAI's official directory.
-
-## Use
+Then:
 
 ```text
 $codex-budget Fix this CSV import bug. Keep my current model,
@@ -39,20 +37,46 @@ $codex-budget Measure the observed allowance change for this task
 if a supported usage tool is available.
 ```
 
-Implicit selection is enabled for quota-conservation requests. There are no executable helpers, credentials, network clients, or dependencies in the skill.
+For manual installation, copy only `skills/codex-budget` into the skill directory supported by your host. Environments using `$CODEX_HOME/skills` should use that location, commonly `~/.codex/skills`; current documentation also describes `~/.agents/skills` and project-local `.agents/skills`. See [Build skills](https://learn.chatgpt.com/docs/build-skills). Avoid duplicate copies in multiple scanned paths; restart Codex if discovery needs refreshing.
 
-## Evaluate
+The instructions require no dependencies or API keys. The optional comparison utility requires Python 3.10+ and uses only the standard library.
 
-Compare several similar tasks at comparable quality. Hold model, reasoning effort, and speed constant when evaluating workflow changes. Record settings changes separately.
+## What changed in 0.2.0
 
-Compare percentage-point usage changes within the same window and reset period. Account-wide activity, rounding, delayed accounting, and cache effects limit attribution. Include failed attempts and rework. Never infer subscription savings directly from API token prices.
+- A local comparison utility with 28 automated tests.
+- Explicit handling of used versus remaining quota.
+- Active-turn readings labeled as checkpoints, not final charges.
+- Public test reports permitted only when requested and sanitized.
+- A detailed human guide, real observation report, and redesigned repository page.
 
-See the [measurement guide](skills/codex-budget/references/measurement.md) and [validation scenarios](docs/validation.md).
+## Evidence, not promises
 
-Contributions should include an anonymized task and expected versus observed behavior. Savings claims need actual measurements and their limitations. Keep account data and credentials out of public issues.
+The [test report](docs/test-report.md) separates automated utility tests from actual account-usage observations and a future controlled comparison. Passing software tests does not establish that the skill changes agent behavior or saves subscription allowance.
 
-## Background
+Usage readings may be rounded, delayed, or affected by concurrent work. Five-hour and weekly windows must be evaluated separately. A reading taken during an active turn excludes later work and final accounting. Model and effort reported by a user are labeled accordingly.
 
-Inspired by a discussion of [this KV-cache article](https://habr.com/ru/articles/978498/), with independently written instructions grounded in [official usage guidance](https://learn.chatgpt.com/docs/pricing) and [skill documentation](https://learn.chatgpt.com/docs/build-skills).
+This release has no controlled baseline without the skill. It makes no measured savings claim.
+
+## Reproduce utility tests
+
+```text
+python -m unittest discover -s tests -v
+```
+
+Compare normalized snapshots:
+
+```text
+python skills/codex-budget/scripts/compare_usage.py before.json after.json
+```
+
+See the [schema and methodology](skills/codex-budget/references/measurement.md). The utility reads only supplied files, writes no input files, makes no network calls, and emits no exact task-cost or savings estimate.
+
+Tests cover ordinary changes, remaining percentages, resets, missing data, invalid values, timezone equivalence, CLI behavior, and omission of unrelated private fields from output. The test count is a static local result, not a CI status.
+
+## Background and contributions
+
+The project began with a discussion of [this KV-cache article](https://habr.com/ru/articles/978498/). Its instructions are independently written. [API cache discounts](https://developers.openai.com/api/docs/guides/prompt-caching) do not directly determine [subscription allowance](https://learn.chatgpt.com/docs/pricing).
+
+Contribute anonymized examples and expected versus actual behavior. Savings claims need comparable tasks, settings, quality checks, and documented confounders. See [behavioral scenarios](docs/validation.md) and the [changelog](CHANGELOG.md).
 
 Created with Codex. An independent community project, not an official OpenAI product. MIT licensed.

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Budget — useful work, thoughtful usage</title>
+  <desc id="desc">An abstract workflow from scope to work to verification. No measured savings are depicted.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#101E2A"/><stop offset="1" stop-color="#163E43"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#A0E9DA" stroke-opacity=".065"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="400" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="400" rx="24" fill="url(#grid)"/>
+  <path d="M810 0V400" stroke="#A0E9DA" stroke-opacity=".12"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="58" y="48" width="192" height="32" rx="16" fill="#A0E9DA" fill-opacity=".12"/>
+    <text x="78" y="69" font-size="13" letter-spacing="2" fill="#A0E9DA">A CODEX SKILL</text>
+    <text x="54" y="165" font-size="76" font-weight="700" letter-spacing="-3" fill="#F3F5EC">Codex Budget</text>
+    <text x="58" y="217" font-size="27" fill="#B8D0CF">Useful work. Thoughtful usage.</text>
+    <text x="58" y="278" font-size="17" fill="#B8D0CF">Preserve quality. Reduce repetition. Measure honestly.</text>
+    <circle cx="65" cy="335" r="6" fill="#F7B267"/>
+    <text x="83" y="341" font-size="15" fill="#D8E6DE">OPEN SOURCE  /  LOCAL FIRST  /  MIT</text>
+    <g transform="translate(866 65)">
+      <path d="M38 50V240" fill="none" stroke="#78CDBE" stroke-width="2" stroke-dasharray="4 7"/>
+      <rect width="326" height="70" rx="14" fill="#1A4247" stroke="#426467"/>
+      <circle cx="38" cy="35" r="17" fill="#A0E9DA"/>
+      <text x="33" y="41" font-size="17" font-weight="700" fill="#153237">1</text>
+      <text x="75" y="32" font-size="20" font-weight="600" fill="#F3F5EC">Scope</text>
+      <text x="75" y="54" font-size="14" fill="#B8D0CF">Define the result that matters</text>
+      <rect y="100" width="326" height="70" rx="14" fill="#1A4247" stroke="#426467"/>
+      <circle cx="38" cy="135" r="17" fill="#A0E9DA"/>
+      <text x="33" y="141" font-size="17" font-weight="700" fill="#153237">2</text>
+      <text x="75" y="132" font-size="20" font-weight="600" fill="#F3F5EC">Work</text>
+      <text x="75" y="154" font-size="14" fill="#B8D0CF">Reuse evidence, avoid churn</text>
+      <rect y="200" width="326" height="70" rx="14" fill="#1A4247" stroke="#F7B267"/>
+      <circle cx="38" cy="235" r="17" fill="#F7B267"/>
+      <path d="m30 235 6 6 10-12" fill="none" stroke="#153237" stroke-width="2.5"/>
+      <text x="75" y="232" font-size="20" font-weight="600" fill="#F3F5EC">Verify</text>
+      <text x="75" y="254" font-size="14" fill="#B8D0CF">Keep checks, report evidence</text>
+    </g>
+  </g>
+</svg>
