@@ -1,0 +1,11 @@
+# Private measurements and task-local artifacts
+measurements/
+work/
+.env
+.env.*
+key.txt
+*.pem
+__pycache__/
+.venv/
+.DS_Store
+Thumbs.db
