@@ -6,7 +6,7 @@
 
 [Русский](README.md) · [Test report](docs/test-report.md) · [Human guide, Russian](docs/guide.ru.md) · [MIT](LICENSE)
 
-Version **0.2.0** · **28 local utility tests passed** · **Savings not yet proven**
+Version **0.3.0** · **28 local utility tests passed** · **Savings not yet proven**
 
 Codex Budget is a small local skill that encourages focused investigation, reuse of relevant evidence, fewer repetitive attempts, and appropriate verification. It preserves your requested scope and quality. Settings advice and usage measurement happen when useful or requested.
 
@@ -41,7 +41,15 @@ For manual installation, copy only `skills/codex-budget` into the skill director
 
 The instructions require no dependencies or API keys. The optional comparison utility requires Python 3.10+ and uses only the standard library.
 
-## What changed in 0.2.0
+## What changed in 0.3.0
+
+- Reduced the entrypoint to fewer than 200 whitespace-delimited words, including metadata; this is not a measured quota reduction.
+- Moved conditional settings and measurement guidance into the existing reference.
+- Preserve full noisy logs locally while returning exit status, summaries, and diagnostic context.
+- After two failed attempts at one hypothesis, change approach using evidence; do not automatically abandon the task or ask for permission to continue.
+- Added a [three-task experiment design and rationale (Russian)](docs/experiment-v0.3.md). Agent trials have not been run. The existing helper measures quota deltas only; other metrics need separate records.
+
+## Included since 0.2.0
 
 - A local comparison utility with 28 automated tests.
 - Explicit handling of used versus remaining quota.

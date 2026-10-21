@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — 2026-10-21
+
+- Shortened the core instructions to fewer than 200 words including metadata; retained scope, settings, verification, and privacy constraints.
+- Moved conditional settings and quota guidance to the measurement reference.
+- Clarified low-noise output with preserved logs, exit status, and diagnostic context.
+- Added an evidence-based change of approach after two failed attempts at one hypothesis, without a mandatory approval gate.
+- Documented three proposed controlled tasks and separate records for quality, behavior, tokens, and quota. No agent benchmark or demonstrated savings claim.
+
 ## 0.2.0 — 2026-10-20
 
 - Redesigned the GitHub landing page with a vector banner and clear navigation.

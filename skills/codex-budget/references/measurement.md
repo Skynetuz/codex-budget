@@ -1,6 +1,14 @@
 # Measuring subscription allowance
 
-Use this procedure when the user requests a measurement. Routine tasks do not need a benchmark or extra account reads.
+Use the relevant section for requested measurement or settings advice. Routine execution does not need account reads or a benchmark.
+
+## Settings advice and stopping targets
+
+For settings advice, consult current official documentation and settings available in the host. Honor the user's model, effort, speed, and workflow choices. Recommend an economical setting appropriate to the task without hardcoding model rankings or multipliers. A skill cannot change the active model through instructions; use a supported setting control only when authorized. Do not start paid API sessions, extra agents, or background monitors just to save quota.
+
+Local scripts, fewer tool calls, parallel execution, and API cache discounts do not establish subscription savings. Do not pad or reread material to manufacture cache hits. Reuse useful context; if it impairs work, prepare a brief handoff before an authorized move to another chat.
+
+A user-requested quota ceiling is a best-effort target, not a guaranteed cap. When a supported reading reaches an explicit stopping threshold, stop at a safe checkpoint and report unfinished work. Low remaining quota alone does not authorize abandoning a task.
 
 ## Capture
 
