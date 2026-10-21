@@ -47,7 +47,7 @@ The instructions require no dependencies or API keys. The optional comparison ut
 - Moved conditional settings and measurement guidance into the existing reference.
 - Preserve full noisy logs locally while returning exit status, summaries, and diagnostic context.
 - After two failed attempts at one hypothesis, change approach using evidence; do not automatically abandon the task or ask for permission to continue.
-- Added a [three-task experiment design and rationale (Russian)](docs/experiment-v0.3.md). Agent trials have not been run. The existing helper measures quota deltas only; other metrics need separate records.
+- Added a [three-task experiment design and rationale (Russian)](docs/experiment-v0.3.md). The first pair on task A is complete; B/C remain unrun. Both solutions passed the 28 original checks. The skill run used fewer input tokens and commands, but this is not evidence of quota savings. See the [pilot report and sanitized data](docs/pilot-v0.3.md).
 
 ## Included since 0.2.0
 
@@ -63,7 +63,7 @@ The [test report](docs/test-report.md) separates automated utility tests from ac
 
 Usage readings may be rounded, delayed, or affected by concurrent work. Five-hour and weekly windows must be evaluated separately. A reading taken during an active turn excludes later work and final accounting. Model and effort reported by a user are labeled accordingly.
 
-This release has no controlled baseline without the skill. It makes no measured savings claim.
+One baseline/skill pair has been completed with isolated CLI contexts. Order, caching, different added test coverage, and coordinating-chat usage limit interpretation. It makes no measured subscription-savings claim.
 
 ## Reproduce utility tests
 

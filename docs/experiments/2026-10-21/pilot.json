@@ -1,0 +1,171 @@
+{
+  "status": "one_pair_pilot_not_savings_proof",
+  "base_commit": "2e419078f1f4741342617703f01a7ae4f7590340",
+  "client": "codex-cli 0.163.0-alpha.11",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "service_tier": "default",
+  "settings_source": "explicit CLI configuration; no server-side model attestation",
+  "fixture_files_sha256": {
+    ".gitignore": "2f6f90f5c8c8716ee636633e870c1d61184267644f36b2a83a5198309c67139a",
+    "noisy_tests.py": "9d6dd19e976b7ae2abdee6a9435b252bde3e178c3a099f008b790bf009fa87dd",
+    "skills/codex-budget/references/measurement.md": "6e25395d1f7fb46c78bc243ad532e5d865f12fa4ef4b54fe8616fd7419564fb1",
+    "skills/codex-budget/scripts/compare_usage.py": "9280637f4ae0826b53181a7aa973ed2ff0d3788f60eab282c0d2f63450577b34",
+    "tests/test_compare_usage.py": "c2a7e922471ce3c09727fcf26f8c233d289c6c83d8231d52533ea89c10bce253"
+  },
+  "skill_sha256": "4802d9e6e16c159997af77032e93c245b6aa55bd8c9a29e62c9194c16a321924",
+  "runs": [
+    {
+      "run": "A-baseline",
+      "elapsed_seconds": 67.8,
+      "completed": true,
+      "original_tests_passed": true,
+      "original_test_count": 28,
+      "new_tests_added": 1,
+      "usage": {
+        "input_tokens": 132320,
+        "cached_input_tokens": 103936,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1106,
+        "reasoning_output_tokens": 58
+      },
+      "command_executions": 5,
+      "max_command_event_output_chars": 27199,
+      "model_steps": null,
+      "unnecessary_repeated_reads": null,
+      "before": {
+        "captured_at": "2026-10-21T10:09:24.286Z",
+        "windows": [
+          {
+            "bucket": "codex",
+            "window_minutes": 300,
+            "used_percent": 66,
+            "resets_at": "2026-10-21T14:18:56.000Z"
+          },
+          {
+            "bucket": "codex",
+            "window_minutes": 10080,
+            "used_percent": 37,
+            "resets_at": "2026-10-27T10:12:43.000Z"
+          }
+        ]
+      },
+      "after": {
+        "captured_at": "2026-10-21T10:11:09.226Z",
+        "windows": [
+          {
+            "bucket": "codex",
+            "window_minutes": 300,
+            "used_percent": 81,
+            "resets_at": "2026-10-21T14:18:56.000Z"
+          },
+          {
+            "bucket": "codex",
+            "window_minutes": 10080,
+            "used_percent": 40,
+            "resets_at": "2026-10-27T10:12:43.000Z"
+          }
+        ]
+      },
+      "quota_comparison": {
+        "windows": [
+          {
+            "bucket": "codex",
+            "window_minutes": 300,
+            "status": "observed",
+            "reason": null,
+            "observed_change_pp": 15.0
+          },
+          {
+            "bucket": "codex",
+            "window_minutes": 10080,
+            "status": "observed",
+            "reason": null,
+            "observed_change_pp": 3.0
+          }
+        ],
+        "interpretation": "Account-wide observations, not exact task charges or measured savings. Rounding, delayed accounting and concurrent activity may affect them. A zero displayed change does not prove zero consumption."
+      }
+    },
+    {
+      "run": "A-skill",
+      "elapsed_seconds": 55.71,
+      "completed": true,
+      "original_tests_passed": true,
+      "original_test_count": 28,
+      "new_tests_added": 0,
+      "usage": {
+        "input_tokens": 113705,
+        "cached_input_tokens": 102528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 741,
+        "reasoning_output_tokens": 46
+      },
+      "command_executions": 4,
+      "max_command_event_output_chars": 14052,
+      "model_steps": null,
+      "unnecessary_repeated_reads": null,
+      "before": {
+        "captured_at": "2026-10-21T10:11:09.226Z",
+        "windows": [
+          {
+            "bucket": "codex",
+            "window_minutes": 300,
+            "used_percent": 81,
+            "resets_at": "2026-10-21T14:18:56.000Z"
+          },
+          {
+            "bucket": "codex",
+            "window_minutes": 10080,
+            "used_percent": 40,
+            "resets_at": "2026-10-27T10:12:43.000Z"
+          }
+        ]
+      },
+      "after": {
+        "captured_at": "2026-10-21T10:12:18.713Z",
+        "windows": [
+          {
+            "bucket": "codex",
+            "window_minutes": 300,
+            "used_percent": 88,
+            "resets_at": "2026-10-21T14:18:56.000Z"
+          },
+          {
+            "bucket": "codex",
+            "window_minutes": 10080,
+            "used_percent": 41,
+            "resets_at": "2026-10-27T10:12:43.000Z"
+          }
+        ]
+      },
+      "quota_comparison": {
+        "windows": [
+          {
+            "bucket": "codex",
+            "window_minutes": 300,
+            "status": "observed",
+            "reason": null,
+            "observed_change_pp": 7.0
+          },
+          {
+            "bucket": "codex",
+            "window_minutes": 10080,
+            "status": "observed",
+            "reason": null,
+            "observed_change_pp": 1.0
+          }
+        ],
+        "interpretation": "Account-wide observations, not exact task charges or measured savings. Rounding, delayed accounting and concurrent activity may affect them. A zero displayed change does not prove zero consumption."
+      }
+    }
+  ],
+  "confounders": [
+    "One pair; baseline first; no counterbalanced repetitions.",
+    "Server cache was not controlled; a fresh session is not a cold-cache guarantee.",
+    "Quota is account-wide and includes the coordinating chat and delayed accounting.",
+    "Baseline added one regression test; skill run did not add tests.",
+    "Minimal CLI fixture differs from a normal desktop task.",
+    "Tasks B and C not executed because remaining five-hour allowance reached 12 percent."
+  ]
+}

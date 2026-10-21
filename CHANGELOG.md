@@ -1,5 +1,12 @@
 # Changelog
 
+## Pilot report — 2026-10-21
+
+- Published the first isolated baseline/skill pair for task A with sanitized metrics.
+- Both solutions passed the 28 original tests; baseline added one further regression test.
+- Documented lower observed input tokens and command executions in the skill run, with order/cache/quality differences and account-wide quota contamination explicitly disclosed.
+- Tasks B/C remain unrun; subscription savings remain unproven. Skill code unchanged.
+
 ## 0.3.0 — 2026-10-21
 
 - Shortened the core instructions to fewer than 200 words including metadata; retained scope, settings, verification, and privacy constraints.
